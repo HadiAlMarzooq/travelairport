@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/flight.dart';
+import 'package:travelairport/widgets/loggedin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -90,7 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     horizontal: 40, vertical: 10),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20))),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const loggedin()),
+                              );
+                            },
                             child: const Text(
                               "Login with Google",
                               style: TextStyle(
