@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/flight.dart';
 
 void main() {
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      backgroundColor: Colors.blueGrey[200],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
                 width: double.infinity,
                 height: 346,
-                color: Colors.grey[200],
+                color: HexColor('#E5E6EC'),
                 alignment: Alignment.bottomCenter,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,24 +55,66 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           RotationTransition(
                               turns: new AlwaysStoppedAnimation(45 / 360),
-                              child: Icon(Icons.airplanemode_active, size: 40)),
-                          Text('TravAirPort',
+                              child: const Icon(Icons.airplanemode_on_sharp,
+                                  size: 70)),
+                          const Text('TravAirPort',
                               style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold))
+                                  fontSize: 50, fontWeight: FontWeight.bold)),
                         ],
                       ),
-                      ElevatedButton.icon(
-                          icon: const Icon(Icons.arrow_forward_ios_rounded),
-                          onPressed: null,
-                          label: Text('Continue as a Guest',
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: HexColor("44637C"),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 56.3, vertical: 10),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
+                            onPressed: () {},
+                            child: const Text(
+                              "Join as a Guest",
                               style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold))),
-                      ElevatedButton.icon(
-                          icon: const Icon(Icons.arrow_forward_ios_rounded),
-                          onPressed: null,
-                          label: Text('Sign up with a google account',
+                                  fontSize: 27,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: HexColor("44637C"),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 40, vertical: 10),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
+                            onPressed: () {},
+                            child: const Text(
+                              "Login with Google",
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)))
+                                  fontSize: 27,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      // ElevatedButton.icon(
+                      //     icon: const Icon(null),
+                      //     onPressed: null,
+                      //     label: const Text('Join as a Guest',
+                      //         style: TextStyle(
+                      //             fontSize: 30, fontWeight: FontWeight.bold))),
+                      // ElevatedButton.icon(
+                      //     icon: const Icon(Icons.arrow_forward_ios_rounded),
+                      //     onPressed: null,
+                      //     label: const Text('Sign up with a google account',
+                      //         style: TextStyle(
+                      //             fontSize: 20, fontWeight: FontWeight.bold)))
                     ])),
           ],
         ),
