@@ -102,19 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ],
                       ),
-
-                      // ElevatedButton.icon(
-                      //     icon: const Icon(null),
-                      //     onPressed: null,
-                      //     label: const Text('Join as a Guest',
-                      //         style: TextStyle(
-                      //             fontSize: 30, fontWeight: FontWeight.bold))),
-                      // ElevatedButton.icon(
-                      //     icon: const Icon(Icons.arrow_forward_ios_rounded),
-                      //     onPressed: null,
-                      //     label: const Text('Sign up with a google account',
-                      //         style: TextStyle(
-                      //             fontSize: 20, fontWeight: FontWeight.bold)))
                     ])),
           ],
         ),
