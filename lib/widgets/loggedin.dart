@@ -31,7 +31,7 @@ class _loggedinState extends State<loggedin> {
     return MaterialApp(
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: HexColor('EDF7FA'),
+          backgroundColor: HexColor('EDF1FA'),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.explore_rounded),
