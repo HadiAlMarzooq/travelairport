@@ -59,7 +59,19 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.bold))
                         ],
-                      )
+                      ),
+                      ElevatedButton.icon(
+                          icon: const Icon(Icons.arrow_forward_ios_rounded),
+                          onPressed: null,
+                          label: Text('Continue as a Guest',
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold))),
+                      ElevatedButton.icon(
+                          icon: const Icon(Icons.arrow_forward_ios_rounded),
+                          onPressed: null,
+                          label: Text('Sign up with a google account',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)))
                     ])),
           ],
         ),
