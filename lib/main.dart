@@ -37,11 +37,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[200],
+      backgroundColor: HexColor('#E5E6EC'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RotationTransition(
+                    turns: new AlwaysStoppedAnimation(45 / 360),
+                    child: const Icon(Icons.airplanemode_on_sharp, size: 70)),
+                const Text('TravAirPort',
+                    style:
+                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+              ],
+            ),
             Container(
                 width: double.infinity,
                 height: 346,
@@ -50,18 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RotationTransition(
-                              turns: new AlwaysStoppedAnimation(45 / 360),
-                              child: const Icon(Icons.airplanemode_on_sharp,
-                                  size: 70)),
-                          const Text('TravAirPort',
-                              style: TextStyle(
-                                  fontSize: 50, fontWeight: FontWeight.bold)),
-                        ],
-                      ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
