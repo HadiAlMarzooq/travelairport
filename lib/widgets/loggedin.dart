@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/explore.dart';
 import 'package:travelairport/widgets/availableflight.dart';
@@ -30,6 +31,7 @@ class _loggedinState extends State<loggedin> {
     return MaterialApp(
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: HexColor('EDF7FA'),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.explore_rounded),
@@ -45,7 +47,7 @@ class _loggedinState extends State<loggedin> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: HexColor('1B4965'),
           onTap: _onItemTapped,
         ),
 
