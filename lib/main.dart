@@ -70,7 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     horizontal: 56.3, vertical: 10),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20))),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const loggedin()),
+                              );
+                            },
                             child: const Text(
                               "Join as a Guest",
                               style: TextStyle(
