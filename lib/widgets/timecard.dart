@@ -17,19 +17,19 @@ class _timecardState extends State<timecard> {
   Widget build(BuildContext context) {
     return SizedBox(
                   width: 300,
-                  height: 75,
+                  height: 100,
                   child: Card(
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.watch_later_rounded),
+                      Icon(Icons.watch_later_rounded, size: 50,),
                       Center(
                           child: Text(
                         DateFormat.yMMMMEEEEd().format(fl) +
                             '\n' +
                             DateFormat.j().format(fl),
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
                       )),
