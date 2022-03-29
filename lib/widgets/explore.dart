@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/explore.dart';
 import 'package:travelairport/widgets/availableflight.dart';
@@ -11,13 +12,11 @@ class explore extends StatefulWidget {
 }
 
 class _exploreState extends State<explore> {
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

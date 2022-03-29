@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/help.dart';
@@ -39,12 +40,23 @@ class _helpState extends State<help> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "* How will TravAirport help me?",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: "Lato"),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                              'assets/images/question-mark-sign.svg',
+                              height: 17,
+                              width: 17),
+                          const SizedBox(
+                            width: 6,
+                          ),
+                          const Text(
+                            "How will TravAirport help me?",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontFamily: "Lato"),
+                          ),
+                        ],
                       ),
                       Text(
                         "TravAirport will help you arrange your time in the airport. It can guide you to your gate or any other facility in the airport you are in. It notifies you whenever it is necessary.",
@@ -56,12 +68,23 @@ class _helpState extends State<help> {
                       const SizedBox(
                         height: 23,
                       ),
-                      const Text(
-                        "* I chose the wrong flight.How can I change it to the correct one?",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: "Lato"),
+                      Row(
+                        children: [
+                          SvgPicture.asset(
+                              'assets/images/question-mark-sign.svg',
+                              height: 17,
+                              width: 17),
+                          const SizedBox(
+                            width: 6,
+                          ),
+                          const Text(
+                            "How can i change the flight?",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontFamily: "Lato"),
+                          ),
+                        ],
                       ),
                       Text(
                         "You can do this by going back to the Choose Flight No. page using the arrow at the top left.",

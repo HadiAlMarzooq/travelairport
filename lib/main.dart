@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travelairport/widgets/flight.dart';
@@ -45,9 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RotationTransition(
-                    turns: new AlwaysStoppedAnimation(45 / 360),
-                    child: const Icon(Icons.airplanemode_on_sharp, size: 70)),
+                Lottie.asset('assets/images/logo_airplane.json', height: 80),
                 const Text('TravAirPort',
                     style:
                         TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
@@ -58,93 +57,96 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 346,
                 color: HexColor('#EDE6E6'),
                 alignment: Alignment.bottomCenter,
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 350,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  primary: HexColor("456B7D"),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 56.3, vertical: 10),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20))),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const loggedin()),
-                                );
-                              },
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  SvgPicture.asset('assets/images/person.svg',
-                                      height: 40, width: 40),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Text(
-                                    "Join as a Guest",
-                                    style: TextStyle(
-                                        fontSize: 27,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    primary: HexColor("456B7D"),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 56.3, vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const loggedin()),
+                                  );
+                                },
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    SvgPicture.asset('assets/images/person.svg',
+                                        height: 40, width: 40),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Text(
+                                      "Join as a Guest",
+                                      textScaleFactor: 1.7,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          SizedBox(
-                            width: 350,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  primary: HexColor("456B7D"),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 40, vertical: 10),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20))),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const loggedin()),
-                                );
-                              },
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  SvgPicture.asset(
-                                    'assets/images/google.svg',
-                                    height: 40,
-                                    width: 40,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Text(
-                                    "Login with Google",
-                                    style: TextStyle(
-                                        fontSize: 27,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                ],
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    primary: HexColor("456B7D"),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 40, vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const loggedin()),
+                                  );
+                                },
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/images/google.svg',
+                                      height: 40,
+                                      width: 40,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Text(
+                                      "Login with Google",
+                                      textScaleFactor: 1.7,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ])),
+                          ],
+                        ),
+                      ]),
+                )),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

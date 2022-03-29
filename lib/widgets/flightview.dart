@@ -1,28 +1,25 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:travelairport/widgets/flight.dart';
-
+import 'package:hexcolor/hexcolor.dart';
 
 class flightview extends StatefulWidget {
-    final flight Flight;
+  final flight Flight;
 
-  const flightview({ Key? key, required this.Flight }) : super(key: key);
-  
-
+  const flightview({Key? key, required this.Flight}) : super(key: key);
 
   @override
   State<flightview> createState() => _flightviewState(Flight);
 }
 
 class _flightviewState extends State<flightview> {
-      final flight Flight;
+  final flight Flight;
   _flightviewState(this.Flight);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -30,18 +27,20 @@ class _flightviewState extends State<flightview> {
               children: <Widget>[
                 Row(
                   children: [
-                    SizedBox(width: 30),
+                    const SizedBox(width: 30),
                     Text(
                       Flight.flightNumber,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
                     ),
                   ],
                 ),
-                SizedBox(height: 200,),
-                SizedBox(
+                const SizedBox(
+                  height: 200,
+                ),
+                const SizedBox(
                   height: 50,
                 ),
                 SizedBox(
@@ -51,13 +50,13 @@ class _flightviewState extends State<flightview> {
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.watch_later_rounded),
+                      const Icon(Icons.watch_later_rounded),
                       Center(
                           child: Text(
                         DateFormat.yMMMMEEEEd().format(Flight.flightTime) +
                             '\n' +
                             DateFormat.j().format(Flight.flightTime),
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.black),
