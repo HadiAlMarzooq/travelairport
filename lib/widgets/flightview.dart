@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:travelairport/widgets/flight.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/percentage.dart';
 import 'package:travelairport/widgets/timecard.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -25,7 +26,7 @@ class _flightviewState extends State<flightview> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

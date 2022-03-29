@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:travelairport/widgets/help.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/availableflight.dart';
 import 'package:intl/intl.dart';
 import 'package:travelairport/widgets/flight.dart';
 import 'package:travelairport/widgets/dropdownlist.dart';
 import 'package:travelairport/widgets/flightview.dart';
 import 'package:travelairport/widgets/timecard.dart';
-
-
 
 class availableflight extends StatefulWidget {
   const availableflight({Key? key}) : super(key: key);
@@ -21,28 +20,33 @@ class _availableflightState extends State<availableflight> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Row(
-                  children: [
+                  children: const [
                     SizedBox(width: 30),
                     Text(
-                      'Hey, guest..',
+                      'Welcome, Guest!',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
                     ),
                   ],
                 ),
-                SizedBox(height: 200,),
-                dropdownlist(),
-                SizedBox(
-                  height: 50,
+                const SizedBox(
+                  height: 110,
+                ),
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                  child: dropdownlist(),
+                ),
+                const SizedBox(
+                  height: 70,
                 ),
                 timecard(fl: DateTime.now())
               ]),
