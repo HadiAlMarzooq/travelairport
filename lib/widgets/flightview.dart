@@ -35,7 +35,6 @@ class _flightviewState extends State<flightview> {
               context,
               MaterialPageRoute(builder: (context) => const availableflight()),
             );
-            // Add your onPressed code here!
           },
           backgroundColor: HexColor("#EDE6E6"),
           child: const Icon(
