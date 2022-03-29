@@ -5,6 +5,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/percentage.dart';
 import 'package:travelairport/widgets/timecard.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:travelairport/widgets/availableflight.dart';
 
 class flightview extends StatefulWidget {
   final flight Flight;
@@ -26,6 +28,24 @@ class _flightviewState extends State<flightview> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const availableflight()),
+            );
+            // Add your onPressed code here!
+          },
+          backgroundColor: HexColor("#EDE6E6"),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          elevation: 0,
+          splashColor: Colors.black,
+          hoverElevation: 50,
+        ),
         backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
