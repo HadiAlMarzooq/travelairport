@@ -38,6 +38,7 @@ dependencies:
   intl: ^0.17.0
   flutter_svg: ^1.0.3
   lottie: ^1.2.2
+  percent_indicator: ^4.0.0
 
 dev_dependencies:
   flutter_test:
