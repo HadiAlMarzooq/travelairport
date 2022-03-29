@@ -4,6 +4,10 @@ import 'package:travelairport/widgets/availableflight.dart';
 import 'package:intl/intl.dart';
 import 'package:travelairport/widgets/flight.dart';
 import 'package:travelairport/widgets/dropdownlist.dart';
+import 'package:travelairport/widgets/flightview.dart';
+import 'package:travelairport/widgets/timecard.dart';
+
+
 
 class availableflight extends StatefulWidget {
   const availableflight({Key? key}) : super(key: key);
@@ -40,27 +44,7 @@ class _availableflightState extends State<availableflight> {
                 SizedBox(
                   height: 50,
                 ),
-                SizedBox(
-                  width: 300,
-                  height: 75,
-                  child: Card(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Icon(Icons.watch_later_rounded),
-                      Center(
-                          child: Text(
-                        DateFormat.yMMMMEEEEd().format(DateTime.now()) +
-                            '\n' +
-                            DateFormat.j().format(DateTime.now()),
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      )),
-                    ],
-                  )),
-                )
+                timecard(fl: DateTime.now())
               ]),
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),

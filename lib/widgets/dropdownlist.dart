@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'flight.dart';
+import 'loggedin.dart';
+import 'flightview.dart';
 
 class dropdownlist extends StatefulWidget {
   const dropdownlist({Key? key}) : super(key: key);
@@ -11,12 +13,28 @@ class dropdownlist extends StatefulWidget {
 
 class _dropdownlistState extends State<dropdownlist> {
   @override
-  String dropdownValue = 'XY831';
   List<flight> availableflight = <flight>[
     flight('XY831', 12, DateTime(2022, 4, 3)),
     flight('SV1129', 3, DateTime(2022, 4, 2)),
     flight('EK2822', 9, DateTime(2022, 4, 1))
   ];
+    String dropdownValue = 'XY831';
+
+
+  List<String> getStrings() {
+    List<String> list = [];
+    for (flight element in availableflight) {
+      list.add(element.flightNumber);
+    }
+    return list;
+  }
+
+  int getIndexOfFlight(String fn) {
+    for (flight element in availableflight) {
+      if (element.flightNumber == (fn)) return availableflight.indexOf(element);
+    }
+    return -1;
+  }
 
   Widget build(BuildContext context) {
     return Column(
@@ -42,13 +60,16 @@ class _dropdownlistState extends State<dropdownlist> {
           onChanged: (String? newValue) {
             setState(() {
               dropdownValue = newValue!;
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => flightview(
+                        Flight: availableflight
+                            .elementAt(getIndexOfFlight(newValue)))),
+              );
             });
           },
-          items: <String>[
-            flight('XY831', 12, DateTime(2022, 4, 3)).getFlightName(),
-            flight('SV1129', 3, DateTime(2022, 4, 2)).getFlightName(),
-            flight('EK2822', 9, DateTime(2022, 4, 1)).getFlightName()
-          ].map<DropdownMenuItem<String>>((String value) {
+          items: getStrings().map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Center(child: Text(value)),
