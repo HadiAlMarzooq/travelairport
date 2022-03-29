@@ -18,7 +18,7 @@ class _helpState extends State<help> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: HexColor('#E5E6EC'),
+        backgroundColor: HexColor('#EDE6E6'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

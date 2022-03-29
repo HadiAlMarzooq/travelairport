@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#E5E6EC'),
+      backgroundColor: HexColor('#EDE6E6'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
                 width: double.infinity,
                 height: 346,
-                color: HexColor('#E5E6EC'),
+                color: HexColor('#EDE6E6'),
                 alignment: Alignment.bottomCenter,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 350,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  primary: HexColor("44637C"),
+                                  primary: HexColor("456B7D"),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 56.3, vertical: 10),
                                   shape: RoundedRectangleBorder(
@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 350,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  primary: HexColor("44637C"),
+                                  primary: HexColor("456B7D"),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 40, vertical: 10),
                                   shape: RoundedRectangleBorder(
@@ -123,8 +123,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  SvgPicture.asset('assets/images/google.svg',
-                                      height: 40, width: 40),
+                                  SvgPicture.asset(
+                                    'assets/images/google.svg',
+                                    height: 40,
+                                    width: 40,
+                                  ),
                                   const SizedBox(
                                     width: 10,
                                   ),
