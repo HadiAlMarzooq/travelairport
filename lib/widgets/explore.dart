@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/explore.dart';
@@ -14,14 +15,16 @@ class explore extends StatefulWidget {
 class _exploreState extends State<explore> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: HexColor('#EDE6E6'),
-        body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Text('explore')]),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
+    return Center(
+      child: InteractiveViewer(
+        boundaryMargin: EdgeInsets.all(100),
+        minScale: 0.1,
+        maxScale: 1.6,
+        child: Container(
+          child: SvgPicture.asset(
+            'assets/images/Terminal-Map-Test-0321.svg',
+          ),
+        ),
       ),
     );
   }
