@@ -15,12 +15,13 @@ class explore extends StatefulWidget {
 class _exploreState extends State<explore> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: InteractiveViewer(
-        boundaryMargin: EdgeInsets.all(100),
-        minScale: 0.1,
-        maxScale: 1.6,
-        child: Container(
+    return MaterialApp(
+      home: FittedBox(
+        fit: BoxFit.fitHeight,
+        child: InteractiveViewer(
+          boundaryMargin: const EdgeInsets.symmetric(horizontal: 650),
+          minScale: 1.0,
+          maxScale: 3.0,
           child: SvgPicture.asset(
             'assets/images/Terminal-Map-Test-0321.svg',
           ),
