@@ -52,31 +52,32 @@ class _flightviewState extends State<flightview> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 timecard(fl: Flight.flightTime),
-                SizedBox(height: 50),
-                Text(
+                const SizedBox(height: 40),
+                const Text(
                   'Time Left Until Take Off',
+                  textScaleFactor: 1.6,
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      fontWeight: FontWeight.bold, color: Colors.black),
                 ),
-                Center(child: percentage(fl: Flight)),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: SizedBox(child: percentage(fl: Flight)),
+                ),
                 Row(
                   children: [
-                    SizedBox(width: 50),
+                    SizedBox(width: 90),
                     Text(
                       calculateFlDiff().split(':')[0] +
                           ' HOURS ' +
                           calculateFlDiff().split(':')[1] +
                           ' MINUTES LEFT',
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                      textScaleFactor: 1.2,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black),
                     ),
                   ],
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 50),
                 SizedBox(
                     height: 130,
                     width: 300,
@@ -85,103 +86,126 @@ class _flightviewState extends State<flightview> {
                       children: [
                         Column(
                           children: [
-                            Text(
+                            const Text(
                               'Flight Number',
+                              textScaleFactor: 1.4,
                               style: TextStyle(
-                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
+                            ),
+                            const SizedBox(
+                              height: 4,
                             ),
                             SizedBox(
                               width: 125,
                               height: 75,
                               child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
                                   child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Center(
-                                      child: Text(
-                                    Flight.flightNumber,
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Center(
+                                          child: Text(
+                                        Flight.flightNumber,
+                                        style: const TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      )),
+                                    ],
                                   )),
-                                ],
-                              )),
                             )
                           ],
                         ),
+                        const SizedBox(
+                          width: 3,
+                        ),
                         Column(
                           children: [
-                            Text(
+                            const Text(
                               'Gate Number',
+                              textScaleFactor: 1.4,
                               style: TextStyle(
-                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
+                            ),
+                            const SizedBox(
+                              height: 4,
                             ),
                             SizedBox(
                               width: 125,
                               height: 75,
                               child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
                                   child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Center(
-                                      child: Text(
-                                    Flight.gateNumber.toString(),
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Center(
+                                          child: Text(
+                                        Flight.gateNumber.toString(),
+                                        style: const TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      )),
+                                    ],
                                   )),
-                                ],
-                              )),
                             )
                           ],
                         )
                       ],
                     )),
+                const SizedBox(height: 10.0),
                 Column(
                   children: [
                     SizedBox(
                       width: 350,
                       height: 75,
                       child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                           child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                              child: Text(
-                            'Guide me to my gate or a facility',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Center(
+                                  child: Text(
+                                'Guide me to my gate or a facility',
+                                textScaleFactor: 1.6,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              )),
+                            ],
                           )),
-                        ],
-                      )),
                     ),
+                    const SizedBox(height: 6.0),
                     SizedBox(
                       width: 350,
                       height: 75,
                       child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                           child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                              child: Text(
-                            'Show my flights details',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Center(
+                                  child: Text(
+                                'Show my flights details',
+                                textScaleFactor: 1.6,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              )),
+                            ],
                           )),
-                        ],
-                      )),
                     )
                   ],
                 )
