@@ -28,7 +28,7 @@ class _percentageState extends State<percentage> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(15.0),
-      child: new LinearPercentIndicator(
+      child: LinearPercentIndicator(
         width: MediaQuery.of(context).size.width - 50,
         animation: true,
         lineHeight: 20.0,
@@ -36,7 +36,7 @@ class _percentageState extends State<percentage> {
         percent: percent(),
         linearStrokeCap: LinearStrokeCap.roundAll,
         progressColor: Colors.green[700],
-        barRadius: Radius.circular(10),
+        barRadius: const Radius.circular(10),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:travelairport/widgets/flight.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -65,7 +66,7 @@ class _flightviewState extends State<flightview> {
                 ),
                 Row(
                   children: [
-                    SizedBox(width: 90),
+                    const SizedBox(width: 90),
                     Text(
                       calculateFlDiff().split(':')[0] +
                           ' HOURS ' +
@@ -162,6 +163,46 @@ class _flightviewState extends State<flightview> {
                       ],
                     )),
                 const SizedBox(height: 10.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/saudi-arabia.svg',
+                          height: 30,
+                        ),
+                        const SizedBox(width: 5.0),
+                        const Text("DMM",
+                            textScaleFactor: 1.6,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black))
+                      ],
+                    ),
+                    const Text("-",
+                        textScaleFactor: 2.0,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/saudi-arabia.svg',
+                          height: 30,
+                        ),
+                        const SizedBox(width: 5.0),
+                        const Text("JED",
+                            textScaleFactor: 1.6,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black))
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 Column(
                   children: [
                     SizedBox(
@@ -185,28 +226,6 @@ class _flightviewState extends State<flightview> {
                             ],
                           )),
                     ),
-                    const SizedBox(height: 6.0),
-                    SizedBox(
-                      width: 350,
-                      height: 75,
-                      child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
-                              Center(
-                                  child: Text(
-                                'Show my flights details',
-                                textScaleFactor: 1.6,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              )),
-                            ],
-                          )),
-                    )
                   ],
                 )
               ]),
