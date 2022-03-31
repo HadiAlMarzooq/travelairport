@@ -25,6 +25,15 @@ class _percentageState extends State<percentage> {
       return ((int.parse(calculateFlDiff()) / 300) * 100);
   }
 
+  progressColor() {
+    if (percent() == 1) {
+      return Colors.green[700];
+    } else if (percent() > 0.50) {
+      return Colors.yellow[700];
+    } else
+      return Colors.red[700];
+  }
+
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(15.0),
@@ -35,7 +44,7 @@ class _percentageState extends State<percentage> {
         animationDuration: 2000,
         percent: percent(),
         linearStrokeCap: LinearStrokeCap.roundAll,
-        progressColor: Colors.green[700],
+        progressColor: progressColor(),
         barRadius: const Radius.circular(10),
       ),
     );
