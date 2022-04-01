@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
+import 'package:lottie/lottie.dart';
+import 'package:travelairport/widgets/explore.dart';
 import 'package:travelairport/widgets/flight.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/percentage.dart';
 import 'package:travelairport/widgets/timecard.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:travelairport/widgets/loggedin.dart';
 import 'package:travelairport/widgets/availableflight.dart';
 
 class flightview extends StatefulWidget {
@@ -180,10 +183,8 @@ class _flightviewState extends State<flightview> {
                                 color: Colors.black))
                       ],
                     ),
-                    const Text("-",
-                        textScaleFactor: 2.0,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    Lottie.asset('assets/images/flight_from_to.json',
+                        height: 40),
                     Row(
                       children: [
                         SvgPicture.asset(
@@ -201,7 +202,7 @@ class _flightviewState extends State<flightview> {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Column(
                   children: [
@@ -214,14 +215,23 @@ class _flightviewState extends State<flightview> {
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
+                            children: [
                               Center(
-                                  child: Text(
-                                'Guide me to my gate or a facility',
-                                textScaleFactor: 1.6,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                  child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const explore()),
+                                  );
+                                },
+                                child: const Text(
+                                  'Guide me to my gate or a facility',
+                                  textScaleFactor: 1.6,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
+                                ),
                               )),
                             ],
                           )),

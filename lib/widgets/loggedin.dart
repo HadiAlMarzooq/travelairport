@@ -23,9 +23,9 @@ class _loggedinState extends State<loggedin> {
   @override
   Widget build(BuildContext context) {
     List<Widget> _widgetOptions = <Widget>[
-      explore(),
-      availableflight(),
-      help()
+      const explore(),
+      const availableflight(),
+      const help()
     ];
 
     return MaterialApp(
