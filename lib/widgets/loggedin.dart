@@ -51,7 +51,7 @@ class _loggedinState extends State<loggedin> {
           onTap: _onItemTapped,
         ),
 
-        backgroundColor: HexColor('#EDE6E6'),
+        backgroundColor: HexColor('F5F5F5'),
         body: Center(
           child: Center(
             child: _widgetOptions.elementAt(_selectedIndex),

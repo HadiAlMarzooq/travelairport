@@ -20,7 +20,7 @@ class _availableflightState extends State<availableflight> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: HexColor('#EDE6E6'),
+        backgroundColor: HexColor('F5F5F5'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

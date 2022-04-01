@@ -40,7 +40,7 @@ class _flightviewState extends State<flightview> {
               MaterialPageRoute(builder: (context) => const availableflight()),
             );
           },
-          backgroundColor: HexColor("#EDE6E6"),
+          backgroundColor: HexColor("F5F5F5"),
           child: const Icon(
             Icons.arrow_back,
             color: Colors.black,
@@ -49,7 +49,7 @@ class _flightviewState extends State<flightview> {
           splashColor: Colors.black,
           hoverElevation: 50,
         ),
-        backgroundColor: HexColor('#EDE6E6'),
+        backgroundColor: HexColor('F5F5F5'),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
