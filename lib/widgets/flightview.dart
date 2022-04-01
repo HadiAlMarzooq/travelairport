@@ -171,9 +171,16 @@ class _flightviewState extends State<flightview> {
                   children: [
                     Row(
                       children: [
-                        SvgPicture.asset(
-                          'assets/images/saudi-arabia.svg',
-                          height: 30,
+                        ClipOval(
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            child: SvgPicture.asset(
+                              'assets/images/saudi-arabia.svg',
+                              height: 30,
+                              fit: BoxFit.fitHeight,
+                            ),
+                          ),
                         ),
                         const SizedBox(width: 5.0),
                         const Text("DMM",
@@ -187,9 +194,16 @@ class _flightviewState extends State<flightview> {
                         height: 40),
                     Row(
                       children: [
-                        SvgPicture.asset(
-                          'assets/images/saudi-arabia.svg',
-                          height: 30,
+                        ClipOval(
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            child: SvgPicture.asset(
+                              'assets/images/saudi-arabia.svg',
+                              height: 30,
+                              fit: BoxFit.fitHeight,
+                            ),
+                          ),
                         ),
                         const SizedBox(width: 5.0),
                         const Text("JED",
