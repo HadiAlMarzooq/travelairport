@@ -18,8 +18,8 @@ class _timecardState extends State<timecard> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 320,
-      height: 75,
+      width: 350,
+      height: 100,
       child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
@@ -36,7 +36,7 @@ class _timecardState extends State<timecard> {
                   DateFormat.yMMMMEEEEd().format(fl) +
                       '\n' +
                       DateFormat.j().format(fl),
-                  textScaleFactor: 1.2,
+                  textScaleFactor: 1.4,
                   style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
