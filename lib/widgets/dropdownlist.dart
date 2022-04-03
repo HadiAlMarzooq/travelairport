@@ -16,8 +16,8 @@ class _dropdownlistState extends State<dropdownlist> {
   List<flight> availableflight = <flight>[
     flight('XY831', 12, DateTime(2022, 4, 3)),
     flight('SV1129', 3, DateTime(2022, 4, 2)),
-    flight('EK2822', 9, DateTime(2022, 4, 1)),
-    flight('AV282', 9, DateTime(2022, 4, 1, 0))
+    flight('EK2822', 9, DateTime(2022, 4, 1, 3)),
+    flight('AV282', 9, DateTime(2022, 4, 1, 2))
   ];
   String dropdownValue = 'XY831';
 

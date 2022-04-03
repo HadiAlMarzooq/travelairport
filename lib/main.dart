@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#EDE6E6'),
+      backgroundColor: HexColor('F5F5F5'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
                 width: double.infinity,
                 height: 346,
-                color: HexColor('#EDE6E6'),
+                color: HexColor('F5F5F5'),
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
