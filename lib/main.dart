@@ -52,9 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
               ],
             ),
+            Lottie.asset('assets/images/walking_traveler.json', height: 350),
             Container(
                 width: double.infinity,
-                height: 346,
+                height: 250,
                 color: HexColor('F5F5F5'),
                 alignment: Alignment.bottomCenter,
                 child: Padding(
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Container(
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    primary: HexColor("456B7D"),
+                                    primary: HexColor("395E66"),
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 56.3, vertical: 10),
                                     shape: RoundedRectangleBorder(
@@ -86,9 +87,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     SvgPicture.asset('assets/images/person.svg',
-                                        height: 40, width: 40),
+                                        color: Colors.white,
+                                        height: 40,
+                                        width: 40),
                                     const SizedBox(
-                                      width: 10,
+                                      width: 15,
                                     ),
                                     const Text(
                                       "Join as a Guest",
@@ -107,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Container(
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    primary: HexColor("456B7D"),
+                                    primary: HexColor("395E66"),
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 40, vertical: 10),
                                     shape: RoundedRectangleBorder(
@@ -128,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       'assets/images/google.svg',
                                       height: 40,
                                       width: 40,
+                                      color: Colors.white,
                                     ),
                                     const SizedBox(
                                       width: 10,
