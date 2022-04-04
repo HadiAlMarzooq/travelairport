@@ -36,11 +36,9 @@ class _timecardState extends State<timecard> {
                   DateFormat.yMMMMEEEEd().format(fl) +
                       '\n' +
                       DateFormat.j().format(fl),
-                  textScaleFactor: 1.4,
+                  textScaleFactor: 1.6,
                   style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      fontWeight: FontWeight.bold, color: Colors.black),
                 )),
               ],
             ),

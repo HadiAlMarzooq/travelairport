@@ -125,7 +125,7 @@ class _flightviewState extends State<flightview> {
                           ],
                         ),
                         const SizedBox(
-                          width: 3,
+                          width: 45,
                         ),
                         Column(
                           children: [
@@ -216,7 +216,7 @@ class _flightviewState extends State<flightview> {
                   ],
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 Column(
                   children: [

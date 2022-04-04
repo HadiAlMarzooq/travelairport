@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/availableflight.dart';
@@ -31,22 +32,35 @@ class _availableflightState extends State<availableflight> {
                     SizedBox(width: 30),
                     Text(
                       'Welcome, Guest!',
+                      textScaleFactor: 2.3,
                       style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                          fontWeight: FontWeight.bold, color: Colors.black),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 110,
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Safe Travels",
+                        textScaleFactor: 2.0,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.black)),
+                    Lottie.asset("assets/images/animated_airplane_2.json",
+                        height: 35),
+                  ],
+                ),
+                const SizedBox(
+                  height: 100,
                 ),
                 const Padding(
-                  padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                  padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
                   child: dropdownlist(),
                 ),
                 const SizedBox(
-                  height: 70,
+                  height: 120,
                 ),
                 timecard(fl: DateTime.now())
               ]),

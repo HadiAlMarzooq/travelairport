@@ -47,9 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Lottie.asset('assets/images/logo_airplane.json', height: 80),
-                const Text('TravAirPort',
-                    style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                Text('TravAirPort',
+                    style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                        color: HexColor('32936F'))),
               ],
             ),
             Lottie.asset('assets/images/walking_traveler.json', height: 350),

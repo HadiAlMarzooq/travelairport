@@ -14,10 +14,10 @@ class dropdownlist extends StatefulWidget {
 class _dropdownlistState extends State<dropdownlist> {
   @override
   List<flight> availableflight = <flight>[
-    flight('XY831', 12, DateTime(2022, 4, 3)),
-    flight('SV1129', 3, DateTime(2022, 4, 2)),
-    flight('EK2822', 9, DateTime(2022, 4, 1, 3)),
-    flight('AV282', 9, DateTime(2022, 4, 1, 2))
+    flight('XY831', 12, DateTime(2022, 4, 6)),
+    flight('SV1129', 3, DateTime(2022, 4, 7)),
+    flight('EK2822', 9, DateTime(2022, 4, 6, 3)),
+    flight('AV282', 9, DateTime(2022, 4, 5, 2))
   ];
   String dropdownValue = 'XY831';
 
@@ -46,16 +46,11 @@ class _dropdownlistState extends State<dropdownlist> {
           children: [
             const Text(
               'Select Your Flight Number',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+              textScaleFactor: 1.4,
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
             ),
-            const SizedBox(width: 13),
-            Lottie.asset(
-              'assets/images/animated_airplane.json',
-              height: 40,
-            )
+            Lottie.asset('assets/images/animated_airplane.json', width: 110)
           ],
         ),
         const SizedBox(
