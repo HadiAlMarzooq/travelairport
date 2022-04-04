@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Container(
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    primary: HexColor("395E66"),
+                                    primary: HexColor("387D7A"),
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 56.3, vertical: 10),
                                     shape: RoundedRectangleBorder(
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Container(
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    primary: HexColor("395E66"),
+                                    primary: HexColor("387D7A"),
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 40, vertical: 10),
                                     shape: RoundedRectangleBorder(

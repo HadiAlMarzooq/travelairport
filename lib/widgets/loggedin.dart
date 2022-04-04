@@ -47,7 +47,7 @@ class _loggedinState extends State<loggedin> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: HexColor('1B4965'),
+          selectedItemColor: HexColor('387D7A'),
           onTap: _onItemTapped,
         ),
 

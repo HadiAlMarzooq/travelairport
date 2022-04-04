@@ -32,7 +32,7 @@ class _helpState extends State<help> {
                   fontFamily: "Lato"),
             ),
             const SizedBox(
-              height: 50,
+              height: 100,
             ),
             Container(
               height: 350,
@@ -43,7 +43,7 @@ class _helpState extends State<help> {
                   Row(
                     children: [
                       SvgPicture.asset('assets/images/question-mark-sign.svg',
-                          height: 17, width: 17),
+                          height: 17, width: 17, color: HexColor("387D7A")),
                       const SizedBox(
                         width: 6,
                       ),
@@ -61,15 +61,15 @@ class _helpState extends State<help> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 19,
-                        color: HexColor("004E64")),
+                        color: HexColor("395e66")),
                   ),
                   const SizedBox(
-                    height: 23,
+                    height: 40,
                   ),
                   Row(
                     children: [
                       SvgPicture.asset('assets/images/question-mark-sign.svg',
-                          height: 17, width: 17),
+                          height: 17, width: 17, color: HexColor("387D7A")),
                       const SizedBox(
                         width: 6,
                       ),
@@ -87,7 +87,7 @@ class _helpState extends State<help> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 19,
-                        color: HexColor("004E64")),
+                        color: HexColor("395e66")),
                   ),
                 ],
               ),
@@ -99,8 +99,7 @@ class _helpState extends State<help> {
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                const Icon(Icons.attach_email,
-                    color: Colors.blueGrey, size: 60),
+                Icon(Icons.attach_email, color: HexColor("395e66"), size: 60),
                 Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -118,7 +117,7 @@ class _helpState extends State<help> {
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
                                   fontFamily: "Lato",
-                                  color: Colors.blueGrey[700]),
+                                  color: HexColor("395e66")),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   Clipboard.setData(const ClipboardData(
