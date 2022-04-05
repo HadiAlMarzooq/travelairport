@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:lottie/lottie.dart';
 import 'flight.dart';
 import 'loggedin.dart';
 import 'flightview.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class dropdownlist extends StatefulWidget {
   const dropdownlist({Key? key}) : super(key: key);
@@ -44,11 +46,12 @@ class _dropdownlistState extends State<dropdownlist> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Select Your Flight Number',
-              textScaleFactor: 1.4,
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+              textScaleFactor: 1.5,
+              style: GoogleFonts.arsenal(
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: HexColor('387D7A'))),
             ),
             Lottie.asset('assets/images/animated_airplane.json', width: 110)
           ],
@@ -57,18 +60,21 @@ class _dropdownlistState extends State<dropdownlist> {
           height: 50,
         ),
         Container(
-          decoration: const ShapeDecoration(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              side: BorderSide(width: 1.0, style: BorderStyle.solid),
+          decoration: ShapeDecoration(
+            color: HexColor("387D7A"),
+            shape: const RoundedRectangleBorder(
+              side: BorderSide(width: 1.0, style: BorderStyle.none),
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
             ),
           ),
           child: DropdownButton<String>(
             isExpanded: true,
-            dropdownColor: Colors.white,
+            dropdownColor: HexColor("387D7A"),
             value: dropdownValue,
-            icon: const Icon(Icons.arrow_downward),
+            icon: const Icon(
+              Icons.arrow_downward,
+              color: Colors.white,
+            ),
             elevation: 16,
             style: Theme.of(context).textTheme.headline6,
             underline: Container(
@@ -90,7 +96,11 @@ class _dropdownlistState extends State<dropdownlist> {
             items: getStrings().map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
-                child: Center(child: Text(value)),
+                child: Center(
+                    child: Text(
+                  value,
+                  style: const TextStyle(color: Colors.white),
+                )),
               );
             }).toList(),
           ),

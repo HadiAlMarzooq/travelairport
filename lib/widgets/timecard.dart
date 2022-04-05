@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class timecard extends StatefulWidget {
   final DateTime fl;
@@ -30,15 +33,17 @@ class _timecardState extends State<timecard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Lottie.asset('assets/images/clock.json', height: 60),
+                Lottie.asset('assets/images/clock.json', width: 30),
                 Center(
                     child: Text(
                   DateFormat.yMMMMEEEEd().format(fl) +
                       '\n' +
                       DateFormat.j().format(fl),
-                  textScaleFactor: 1.6,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black),
+                  textScaleFactor: 1.5,
+                  style: GoogleFonts.ibmPlexMono(
+                      textStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: HexColor("387D7A"))),
                 )),
               ],
             ),

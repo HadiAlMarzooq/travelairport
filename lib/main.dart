@@ -4,6 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travelairport/widgets/flight.dart';
 import 'package:travelairport/widgets/loggedin.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,10 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Lottie.asset('assets/images/logo_airplane.json', height: 80),
                 Text('TravAirPort',
-                    style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                        color: HexColor('32936F'))),
+                    textScaleFactor: 3.6,
+                    style: GoogleFonts.rubik(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: HexColor('32936F')))),
               ],
             ),
             Lottie.asset('assets/images/walking_traveler.json', height: 350),
@@ -95,12 +97,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     const SizedBox(
                                       width: 15,
                                     ),
-                                    const Text(
+                                    Text(
                                       "Join as a Guest",
-                                      textScaleFactor: 1.7,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                      textScaleFactor: 1.8,
+                                      style: GoogleFonts.arsenal(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white)),
                                     ),
                                   ],
                                 ),
@@ -138,12 +141,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     const SizedBox(
                                       width: 10,
                                     ),
-                                    const Text(
+                                    Text(
                                       "Login with Google",
-                                      textScaleFactor: 1.7,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                      textScaleFactor: 1.8,
+                                      style: GoogleFonts.arsenal(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white)),
                                     ),
                                   ],
                                 ),

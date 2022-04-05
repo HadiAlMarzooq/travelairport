@@ -11,6 +11,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/loggedin.dart';
 import 'package:travelairport/widgets/availableflight.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class flightview extends StatefulWidget {
   final flight Flight;
@@ -69,15 +70,17 @@ class _flightviewState extends State<flightview> {
                 ),
                 Row(
                   children: [
-                    const SizedBox(width: 90),
+                    const SizedBox(width: 80),
                     Text(
                       calculateFlDiff().split(':')[0] +
                           ' HOURS ' +
                           calculateFlDiff().split(':')[1] +
                           ' MINUTES LEFT',
                       textScaleFactor: 1.2,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black),
+                      style: GoogleFonts.ibmPlexMono(
+                          textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                     ),
                   ],
                 ),
@@ -224,6 +227,7 @@ class _flightviewState extends State<flightview> {
                       width: 350,
                       height: 75,
                       child: Card(
+                          color: HexColor("387D7A"),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -239,12 +243,13 @@ class _flightviewState extends State<flightview> {
                                         builder: (context) => const explore()),
                                   );
                                 },
-                                child: const Text(
+                                child: Text(
                                   'Guide me to my gate or a facility',
                                   textScaleFactor: 1.6,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
+                                  style: GoogleFonts.arsenal(
+                                      textStyle: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white)),
                                 ),
                               )),
                             ],

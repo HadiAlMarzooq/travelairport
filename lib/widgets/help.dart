@@ -7,6 +7,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/help.dart';
 import 'package:travelairport/widgets/availableflight.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class help extends StatefulWidget {
   const help({Key? key}) : super(key: key);
@@ -24,12 +25,13 @@ class _helpState extends State<help> {
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <
               Widget>[
-            const Text(
+            Text(
               "FAQs",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 35.0,
-                  fontFamily: "Lato"),
+              textScaleFactor: 3.0,
+              style: GoogleFonts.archivo(
+                  textStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+              )),
             ),
             const SizedBox(
               height: 100,
@@ -47,21 +49,21 @@ class _helpState extends State<help> {
                       const SizedBox(
                         width: 6,
                       ),
-                      const Text(
+                      Text(
                         "How will TravAirport help me?",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: "Lato"),
+                        textScaleFactor: 1.4,
+                        style: GoogleFonts.archivo(
+                            textStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("395E66"))),
                       ),
                     ],
                   ),
                   Text(
                     "TravAirport will help you arrange your time in the airport. It can guide you to your gate or any other facility in the airport you are in. It notifies you whenever it is necessary.",
+                    textScaleFactor: 1.4,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 19,
-                        color: HexColor("395e66")),
+                        fontWeight: FontWeight.bold, color: HexColor("32936F")),
                   ),
                   const SizedBox(
                     height: 40,
@@ -73,21 +75,21 @@ class _helpState extends State<help> {
                       const SizedBox(
                         width: 6,
                       ),
-                      const Text(
+                      Text(
                         "How can i change the flight?",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: "Lato"),
+                        textScaleFactor: 1.4,
+                        style: GoogleFonts.archivo(
+                            textStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("395E66"))),
                       ),
                     ],
                   ),
                   Text(
                     "You can do this by going back to the Choose Flight No. page using the arrow at the top left.",
+                    textScaleFactor: 1.4,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 19,
-                        color: HexColor("395e66")),
+                        fontWeight: FontWeight.bold, color: HexColor("32936F")),
                   ),
                 ],
               ),
@@ -96,19 +98,20 @@ class _helpState extends State<help> {
               height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Icon(Icons.attach_email, color: HexColor("395e66"), size: 60),
+                Icon(Icons.attach_email, color: HexColor("387D7A"), size: 60),
                 Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Text(
+                      Text(
                         "Contact Us",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: "Lato"),
+                        textScaleFactor: 1.6,
+                        style: GoogleFonts.archivo(
+                            textStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        )),
                       ),
                       RichText(
                           text: TextSpan(
